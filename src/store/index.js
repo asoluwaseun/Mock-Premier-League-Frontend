@@ -14,8 +14,8 @@ export default new Vuex.Store({
     loading: true
   },
   mutations: {
-    changeLoading(state){
-      this.state.loading = !state.loading
+    changeLoading(state, payload){
+      this.state.loading = payload
     }
   },
   actions: {

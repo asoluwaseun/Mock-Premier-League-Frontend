@@ -1,17 +1,23 @@
 <template>
   <div id="app">
     <Loader v-if="loading"/>
-    <router-view v-else/>
+    <div class="container w-full bg-gray-100" style="height: 100vh">
+      <NavBar/>
+      <router-view/>
+    </div>
+
   </div>
 </template>
 
 <script>
   // import FixturesService from './services/FixturesService'
   import Loader from "@/components/Loader.vue";
+  import NavBar from "@/components/NavBar";
 
   export default {
     components: {
-      Loader
+      Loader,
+      NavBar
     },
     data(){
       return {
@@ -19,9 +25,7 @@
       }
     },
     mounted() {
-      setTimeout(()=> {
-        this.$store.commit('changeLoading')
-      }, 5000)
+
     },
     computed: {
       loading(){
