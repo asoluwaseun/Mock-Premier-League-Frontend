@@ -1,35 +1,38 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-    <h2 class="font-light text-2xl">
-    hhhh
-    </h2>
+    <Loader v-if="loading"/>
+    <router-view v-else/>
   </div>
 </template>
 
+<script>
+  // import FixturesService from './services/FixturesService'
+  import Loader from "@/components/Loader.vue";
+
+  export default {
+    components: {
+      Loader
+    },
+    data(){
+      return {
+
+      }
+    },
+    mounted() {
+      setTimeout(()=> {
+        this.$store.commit('changeLoading')
+      }, 5000)
+    },
+    computed: {
+      loading(){
+        return this.$store.state.loading;
+      }
+    },
+    methods: {
+
+    }
+  }
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
