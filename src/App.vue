@@ -5,6 +5,9 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
+    <h2 class="font-light text-2xl">
+    hhhh
+    </h2>
   </div>
 </template>
 
