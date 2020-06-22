@@ -1,5 +1,4 @@
-# Mock Premier League Backend - Live url p-league.netlify.app
-
+# Mock Premier League Backend - Live url https://p-league.netlify.app(https://p-league.netlify.app)
 ## Project setup
 ```
 yarn install
