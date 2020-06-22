@@ -21,8 +21,8 @@
       </div>
     </div>
 
-    <Fixtures :fixtures="fixtures" v-if="view === 'fixtures'" />
-    <Teams :teams="teams" v-else />
+    <Fixtures :admin="false" :fixtures="fixtures" v-if="view === 'fixtures'" />
+    <Teams :admin="false" :teams="teams" v-else />
   </div>
 </template>
 
