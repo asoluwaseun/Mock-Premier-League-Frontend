@@ -1,4 +1,4 @@
-# p-league-frontend
+# Mock Premier League Backend - Live url p-league.netlify.app
 
 ## Project setup
 ```
