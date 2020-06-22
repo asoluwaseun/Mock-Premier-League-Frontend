@@ -1,5 +1,5 @@
 <template>
-    <div class="container bg-cover bg-center bg-opacity-0 h-screen " :style="{backgroundImage: `url(${require('@/assets/images/stadium.jpg')})`}">
+    <div class="container bg-cover bg-center bg-opacity-0 h-auto " :style="{backgroundImage: `url(${require('@/assets/images/stadium.jpg')})`}">
 
         <div class="container text-center ">
             <div class="inline-flex mt-2">

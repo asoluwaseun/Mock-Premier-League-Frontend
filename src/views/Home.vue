@@ -1,5 +1,5 @@
 <template>
-  <div class="container bg-cover bg-center bg-opacity-0 h-screen " :style="{backgroundImage: `url(${require('@/assets/images/stadium.jpg')})`}">
+  <div class="container bg-cover bg-center bg-opacity-0 h-auto " :style="{backgroundImage: `url(${require('@/assets/images/stadium.jpg')})`}">
     <div class="flex pt-auto px-1 mx-2 rounded-sm bg-white bg-opacity-25 h-24 overflow-x-auto">
       <p class="text-center w-full" v-if="teams.length === 0">
         <i class="fa fa-2x fa-spin fa-spinner"></i>
