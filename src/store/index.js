@@ -1,12 +1,11 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-// import FixturesService from "../services/FixturesService"
-// import UserService from "../services/UserService"
-// import TeamsService from "../services/TeamsService"
+import createPersistedState from 'vuex-persistedstate'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  plugins: [createPersistedState()],
   state: {
     user_details: {},
     teams: {},
@@ -15,7 +14,10 @@ export default new Vuex.Store({
   },
   mutations: {
     changeLoading(state, payload){
-      this.state.loading = payload
+      state.loading = payload
+    },
+    setUserDetails(state, payload){
+      state.user_details = payload;
     }
   },
   actions: {

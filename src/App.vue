@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <div id="app" class="bg-gray-100">
     <Loader v-if="loading"/>
-    <div class="container w-full bg-gray-100" style="height: 100vh">
+    <div class="container mx-auto w-full bg-gray-100" style="height: 100vh">
       <NavBar/>
       <router-view/>
     </div>
