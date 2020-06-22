@@ -10,7 +10,7 @@
         </div>
         <div class="w-2/5 text-center">
             <button v-on:click="gotoPage()" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-4 mt-1 border border-gray-400 rounded shadow">
-               <span v-if="present_page.indexOf('admin') === -1 && present_page !== '/login'">
+               <span v-if="present_page.indexOf('admin') === -1 && present_page !== '/login' && present_page != '/signup'">
                     Admin
                </span>
                 <span v-else>

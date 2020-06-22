@@ -42,7 +42,7 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    if(to.path == '/login' && store.state.user_details.id){
+    if((to.path == '/login' && store.state.user_details.id) || (to.path == '/signup' && store.state.user_details.id)){
         next({
             name: 'Admin'
         });

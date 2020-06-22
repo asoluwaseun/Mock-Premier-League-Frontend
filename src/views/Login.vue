@@ -52,7 +52,7 @@
 
                         </div>
                         <div class="w-full text-center">
-                            <small class="text-center w-full">Sign Up</small>
+                            <router-link to="/signup"><small class="text-center w-full">Sign Up</small></router-link>
                         </div>
 
                     </div>
