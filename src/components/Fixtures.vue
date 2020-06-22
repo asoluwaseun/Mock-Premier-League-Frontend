@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="m-2 w-1/2 md:w-3/12 bg-black bg-opacity-25">
+        <div v-if="!admin" class="m-2 w-1/2 md:w-3/12 bg-black bg-opacity-25">
             <t-input-group
                     label="Filter Fixtures"
                     :status-class="{
@@ -20,8 +20,21 @@
                 />
             </t-input-group>
         </div>
+        <div v-else class="m-2 text-center w-full">
+            <button
+                    class="bg-white hover:bg-white text-black font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="button">
+               Add Fixture
+            </button>
+        </div>
         <div class="container px-2 mt-2">
+
             <t-card class="w-full h-32 bg-white mt-1 mr-2" v-for="fixture in fixtures" :key="fixture.id">
+                <div class="flex">
+                    <div w-full>
+
+                    </div>
+                </div>
                 <div class="flex justify-center ">
                     <div class="w-2/5 text-center flex justify-center">
                         <div class="self-center">
@@ -56,7 +69,7 @@
     import moment from "moment";
 
     export default {
-        props: ["fixtures"],
+        props: ["fixtures","admin"],
         data(){
             return {
                 order: "date-asc    "

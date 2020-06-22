@@ -1,5 +1,12 @@
 <template>
     <div class="container px-2 mt-2">
+        <div v-if="admin" class="m-2 text-center w-full">
+            <button
+                    class="bg-white hover:bg-white text-black font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="button">
+                Add Team
+            </button>
+        </div>
         <div class="md:flex">
             <t-card class="w-full  h-32 bg-white mt-1 mr-2" v-for="team in teams" :key="team.id">
                 <div class="flex justify-center">
@@ -27,6 +34,6 @@
 </template>
 <script>
     export default {
-        props: ["teams"]
+        props: ["teams","admin"]
     }
 </script>

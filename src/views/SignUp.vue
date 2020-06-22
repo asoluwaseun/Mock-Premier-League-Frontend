@@ -98,11 +98,17 @@
                             email: this.email,
                             password: this.password
                         });
-                        this.success_message = true;
-                        this.$store.commit('setUserDetails', response.data);
-                        this.$router.push({
-                            name: 'Admin'
-                        }, () => {});
+                        if(!response.error){
+                            this.success_message = true;
+                            this.$store.commit('setUserDetails', response.data);
+                            this.$router.push({
+                                name: 'Admin'
+                            }, () => {});
+                        }
+                        else{
+                            this.input_error = true;
+                        }
+
                         this.loading = false;
 
                     } else {
