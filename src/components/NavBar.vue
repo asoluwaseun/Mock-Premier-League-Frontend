@@ -1,12 +1,12 @@
 <template>
-    <div class="flex h-12 bg-black text-white">
-        <div class="flex-1">
-            hi
+    <div class="flex h-12 bg-black text-white w-full">
+        <div class="w-2/5 text-center">
+j
         </div>
-        <div class="flex-1">
-            hi
+        <div class="w-2/5 text-center">
+k
         </div>
-        <div class="w-2/5">
+        <div class="w-2/5 text-center">
             hi
         </div>
     </div>
